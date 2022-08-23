@@ -1,0 +1,34 @@
+document.getElementById("calculate").addEventListener("click" ,function(){
+    const length =  selectedPlayer.children.length;
+    const perplayercost = getInputvalueById("perplayercost");
+    const playerExenses = document.getElementById("playerExenses");
+    if(isNaN(perplayercost) === true){
+       alert("Please Enter Only Number Value");
+    }
+   else if(length > 0  ){
+    playerExenses.innerText = perplayercost * length ;
+  }
+  else{
+    alert("Please Add Player")
+  }
+})
+
+document.getElementById("totalCalculate").addEventListener("click" ,function(){
+ 
+    const ManagerCost = getInputvalueById("manager");
+    const coachCost = getInputvalueById("coach");
+    const playerCost = getInputvalueById("playerExenses")
+    let  toatalCost ;
+    if(playerCost.length === 0){
+        alert("Pleas add player cost")
+    }
+    else if(!isNaN(ManagerCost)===true && !isNaN(coachCost) === true){
+       toatalCost = ManagerCost + coachCost + playerCost ;
+    const total = document.getElementById("total");
+    total.innerText = toatalCost ;
+    }else{
+        alert("Please Enter Only Number value");
+    }
+})
+
+
