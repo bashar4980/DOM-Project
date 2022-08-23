@@ -2,15 +2,18 @@ document.getElementById("calculate").addEventListener("click" ,function(){
     const length =  selectedPlayer.children.length;
     const perplayercost = getInputvalueById("perplayercost");
     const playerExenses = document.getElementById("playerExenses");
-    if(isNaN(perplayercost) === true){
+
+    if(length === 0){
+        alert("Please Add Player")
+    }
+    else if(isNaN(perplayercost) === true){
        alert("Please Enter Only Number Value");
     }
+   
    else if(length > 0  ){
     playerExenses.innerText = perplayercost * length ;
   }
-  else{
-    alert("Please Add Player")
-  }
+
 })
 
 document.getElementById("totalCalculate").addEventListener("click" ,function(){
