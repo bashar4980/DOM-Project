@@ -18,16 +18,19 @@ document.getElementById("totalCalculate").addEventListener("click" ,function(){
     const ManagerCost = getInputvalueById("manager");
     const coachCost = getInputvalueById("coach");
     const playerCost = getInputvalueById("playerExenses")
-    let  toatalCost ;
-    if(playerCost.length === 0){
-        alert("Pleas add player cost")
+
+ 
+    if(isNaN(ManagerCost)===true){
+      alert("Plese Enter Number Value")
     }
-    else if(!isNaN(ManagerCost)===true && !isNaN(coachCost) === true){
-       toatalCost = ManagerCost + coachCost + playerCost ;
-    const total = document.getElementById("total");
-    total.innerText = toatalCost ;
-    }else{
-        alert("Please Enter Only Number value");
+    else if(isNaN(coachCost)=== true){
+        alert("Plese Enter Number Value")
+    }
+    else{
+        
+        const toatalCost = ManagerCost + coachCost + playerCost ;
+        const total = document.getElementById("total");
+        total.innerText = toatalCost ;
     }
 })
 
