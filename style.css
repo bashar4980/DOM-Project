@@ -40,4 +40,10 @@ h1{
     .card img{
         height: auto;
     }
+    h1{
+        font-size: 28px;
+    }
+    .header_text p{
+        display: none;
+    }
 }
